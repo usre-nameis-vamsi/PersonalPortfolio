@@ -1,0 +1,52 @@
+// app/_components/ProfileCard.tsx
+export default function ProfileCard({
+  className,
+  src = "/images/profile-vamsi-main.png",
+  alt = "Portrait of Vamsi Chanumolu",
+}: Props) {
+  // ** rest of code here **
+}
+
+// app/_components/TechStack.tsx
+const TECH_STACK = {
+  frontend: [
+    { name: "JavaScript", logo: "/images/tech/javascript.jpeg" },
+    { name: "TypeScript", logo: "/images/tech/typescript.svg" },
+    { name: "React", logo: "/images/tech/react.svg" },
+    { name: "Next.Js", logo: "/images/tech/nextjs.png" },
+    { name: "Tailwind CSS", logo: "/images/tech/tailwind.svg" },
+  ],
+  database: [
+    { name: "MySQL", logo: "/images/tech/mysql.png" },
+    { name: "PostgreSQL", logo: "/images/tech/postgresql.svg" },
+    { name: "MongoDB", logo: "/images/tech/mongodb.svg" },
+    { name: "Supabase", logo: "/images/tech/supabase.png" },
+    { name: "Firebase", logo: "/images/tech/firebase.png" },
+  ],
+  tools: [
+    { name: "Git", logo: "/images/tech/github.png" },
+    { name: "AWS", logo: "/images/tech/aws.jpeg" },
+  ],
+} as const
+
+// components/Navbar.tsx
+import React, { useState } from "react";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const year = new Date().getFullYear();
+
+  return (
+    <div>
+      {/* ** rest of code here ** */}
+      <div className="drawer-content">
+        {/* ** rest of code here ** */}
+        <div className="w-full max-w-[300px] mx-8 sm:mx-auto text-xs text-muted-foreground pt-3 pb-2 border-t border-border/40">
+          © {year} Vamsi Chanumolu. All rights reserved.
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

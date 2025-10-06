@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 13%;
+    --background-light: 0 0% 19%;
+    --foreground: 0 0% 87%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 140 100% 47%;
+    --primary-foreground: 0 0% 13%;
+    --secondary: 193 100% 47%;
+    --secondary-foreground: 0 0% 13%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 71%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 24%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-roboto-flex cursor-none;
+  }
+}
+
+@layer components {
+  .grid {
+    @apply gap-[25px];
+  }
+
+  .markdown-text ul {
+    @apply pl-5 mt-2 list-disc;
+  }
+}
+
+.font-anton {
+  font-family: var(--font-anton);
+}
+
+.font-roboto-flex {
+  font-family: var(--font-roboto-flex);
+}
+
+.duration-7000 {
+  animation-duration: 7000ms;
+}
+
+/* Add these new styles for the updated components */
+.pb-section {
+  padding-bottom: 120px;
+}
+
+.py-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* Markdown text styling */
+.markdown-text p {
+  margin-bottom: 1rem;
+}
+
+.markdown-text ol {
+  list-style-type: decimal;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-text a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+}
+
+.markdown-text h1,
+.markdown-text h2,
+.markdown-text h3,
+.markdown-text h4,
+.markdown-text h5,
+.markdown-text h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* For extra small screens */
+@media (min-width: 475px) {
+  .xs\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+/* Vertical text */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Size utility */
+.size-2 {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.size-3\.5 {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.size-8 {
+  width: 2rem;
+  height: 2rem;
+}
+
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+}
